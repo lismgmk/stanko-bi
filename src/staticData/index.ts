@@ -23,3 +23,18 @@ export const upPages = [
   { name: 'Позірк' },
   { name: 'Треш' },
 ]
+export const menuLinePrimary = [
+  { name: 'Главная' },
+  { name: 'Комплектация' },
+  { name: 'Заказчику' },
+  { name: 'Доставка и сборка' },
+  { name: 'Наши работы' },
+  { name: 'Контакты' },
+]
+export const menuLineSecondary = [
+  { name: 'Каталог домов' },
+  { name: 'Каталог бытовок' },
+  { name: 'Каталог беседок' },
+  { name: 'Каталог бань' },
+  { name: 'Каталог хоз. построек' },
+]

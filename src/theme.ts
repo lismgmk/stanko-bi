@@ -17,6 +17,7 @@ export const PS_TEXT_PRIMARY_YELLOW = '#FFC239'
 
 export const PS_BACKGROUND_PRIMARY_WHITE = '#FFFFFF'
 export const PS_BACKGROUND_PRIMARY_WHITE_70 = '#FFFFFFB2'
+export const PS_BACKGROUND_PRIMARY_WHITE_40 = '#FFFFFF66'
 export const PS_BACKGROUND_PRIMARY_BLUE = '#15193D'
 export const PS_BACKGROUND_SECONDARY_BLUE = '#8C93D1'
 export const PS_BACKGROUND_PRIMARY_GREY = '#E5E5E5'
@@ -44,6 +45,7 @@ declare module '@mui/material/Typography' {
     contactsHeader: true
     telNumberHeader: true
     buttonHeader: true
+    buttonPrimaryLine: true
   }
 }
 
@@ -51,6 +53,7 @@ interface ExtendedTypographyOptions extends TypographyOptions {
   contactsHeader: React.CSSProperties
   telNumberHeader: React.CSSProperties
   buttonHeader: React.CSSProperties
+  buttonPrimaryLine: React.CSSProperties
 }
 
 declare module '@mui/material/styles' {
@@ -187,7 +190,18 @@ export const themeCustom = createTheme({
       lineHeight: '14.5px',
       color: PS_TEXT_PRIMARY_BLUE,
       textTransform: 'uppercase',
+      padding: 0,
+      margin: 0,
     },
+    // buttonPrimaryLine: {
+    //   fontWeight: 500,
+    //   fontSize: 14,
+    //   lineHeight: '16.9px',
+    //   color: PS_TEXT_PRIMARY_WHITE,
+    //   textTransform: 'capitalize',
+    //   padding: 0,
+    //   margin: 0,
+    // },
 
     h1: {
       [currentBreakpoints.breakpoints.between('xs', 'sm')]: {
@@ -287,14 +301,14 @@ export const themeCustom = createTheme({
   palette: {
     primary: {
       main: PS_TEXT_PRIMARY_WHITE,
-      // light: PS_MAIN_WHITE,
+      light: PS_TEXT_PRIMARY_YELLOW,
       dark: PS_TEXT_PRIMARY_BLUE,
-      // contrastText: PS_MAIN_GREY_LIGHT,
+      contrastText: PS_TEXT_PRIMARY_BLACK,
     },
-    // background: {
-    //   paper: PS_MAIN_RED,
-    //   default: PS_MAIN_BACKGROUND,
-    // },
+    background: {
+      paper: PS_BACKGROUND_PRIMARY_WHITE_40,
+      default: PS_TEXT_PRIMARY_WHITE,
+    },
     // text: {
     //   primary: PS_OPTIONAL_BLACK,
     //   secondary: PS_MAIN_WHITE,
@@ -307,6 +321,7 @@ export const themeCustom = createTheme({
           contactsHeader: 'span',
           buttonHeader: 'div',
           telNumberHeader: 'div',
+          buttonPrimaryLine: 'div',
         },
       },
     },

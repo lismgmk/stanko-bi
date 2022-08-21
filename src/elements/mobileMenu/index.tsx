@@ -1,11 +1,12 @@
 import { SvgIcon, IconButton } from '@mui/material'
+import Box from '@mui/material/Box'
 import Menu from '@mui/material/Menu'
 import MenuItem from '@mui/material/MenuItem'
 import { nanoid } from 'nanoid'
 import * as React from 'react'
 import { upPages } from '../../staticData'
 import { BurgerSvg } from '../../svgIcons/BurgerSvg'
-import { sxSvgIcon, sxMenu, sxMenuItem } from './style'
+import { sxSvgIcon, sxMenu, sxMenuItem, sxShowMenu } from './style'
 
 export const MobileMenu = () => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null)
@@ -18,7 +19,7 @@ export const MobileMenu = () => {
   }
 
   return (
-    <div>
+    <Box sx={sxShowMenu}>
       <IconButton sx={{ m: 0, p: 0 }} onClick={handleClick}>
         <SvgIcon sx={sxSvgIcon} component={BurgerSvg} />
       </IconButton>
@@ -31,6 +32,6 @@ export const MobileMenu = () => {
           )
         })}
       </Menu>
-    </div>
+    </Box>
   )
 }

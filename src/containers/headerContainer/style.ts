@@ -4,10 +4,11 @@ import { styled } from '@mui/material/styles'
 interface CustomBoxProps extends BoxProps {
   bgColor?: string
   bgImage?: string
+  boxHeight?: number
 }
 
 export const CustomWrapperBox = styled(Box, {
-  shouldForwardProp: (props) => props !== 'bgImage' && props !== 'bgColor',
+  shouldForwardProp: (props) => props !== 'bgImage' && props !== 'bgColor' && props !== 'boxHeight',
 })<CustomBoxProps>((props) => ({
   position: 'relative',
   background:
@@ -30,11 +31,7 @@ export const CustomWrapperBox = styled(Box, {
     position: 'absolute',
   },
 }))
-
-export const sxResponsiveContainerWeight = {
-  pl: { xs: 1.2, sm: 1.2, md: 1.2, lg: 1.2, xl: 1.2 },
-  pr: { xs: 1.2, sm: 1.2, md: 1.2, lg: 1.2, xl: 1.2 },
-  position: 'relative',
-  overflow: 'hidden',
+export const sxDisplay = {
+  display: { xs: 'none', mobile: 'none', sm: 'none', md: 'block', lg: 'block', xl: 'block' },
+  height: '100%',
 }
-export const sxContents = { pb: { xl: 7.5, lg: 7.5, md: 5, sm: 5, xs: 6.2 } }

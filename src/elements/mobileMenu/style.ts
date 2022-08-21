@@ -19,3 +19,10 @@ export const sxMenuItem = {
   },
 }
 export const sxSvgIcon = { width: 48, color: 'primary.dark' }
+
+export const sxHideBlock = { display: { xs: 'none', mobile: 'none', sm: 'none', md: 'flex', lg: 'flex', xl: 'flex' } }
+export const sxHideAddressBlock = {
+  display: { xs: 'none', mobile: 'none', sm: 'none', md: 'none', lg: 'flex', xl: 'flex' },
+}
+export const sxShowMenu = { display: { xs: 'flex', mobile: 'flex', sm: 'flex', md: 'none', lg: 'none', xl: 'none' } }
+export const sxContainerHeight = { height: { xs: 103, mobile: 103, sm: 103, md: 115, lg: 115, xl: 115 } }
