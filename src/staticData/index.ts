@@ -38,3 +38,40 @@ export const menuLineSecondary = [
   { name: 'Каталог бань' },
   { name: 'Каталог хоз. построек' },
 ]
+
+export const mainImageBlock = {
+  title: 'СТРОИТЕЛЬСТВО ДАЧНЫХ ДОМОВ И КОТТЕДЖЕЙ',
+  subTitle:
+    'На участок поставляются готовые модули, производится их монтаж в короткие сроки. Мы гарантируем выполнение всех взятых на себя обязательств и доступные цены.',
+}
+
+export type cardsType = {
+  pathImg: string
+  data: string
+  tag: string
+  title: string
+  article: { option: string; value: string }[]
+  price: string
+}
+
+export const cardsButtons = [
+  { name: 'Каркасные дома' },
+  { name: 'Бани' },
+  { name: 'Беседки' },
+  { name: 'Бытовки' },
+  { name: 'Хоз. постройки' },
+]
+export const cards: cardsType[] = [
+  {
+    pathImg: './post_1.png',
+    data: 'Сегодня',
+    tag: '#болельщикам',
+    title: 'Каркасный дом с балконом LK-2',
+    article: [
+      { option: 'Размер:', value: '4х6 м' },
+      { option: 'Размер:', value: '4х6 м' },
+      { option: 'Размер:', value: '4х6 м' },
+    ],
+    price: '940 000 ₽',
+  },
+]

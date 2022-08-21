@@ -34,18 +34,12 @@ export const PS_BACKGROUND_BUTTON_PRIMARY_GREY_LIGHT = '#A5A5A5'
 export const PS_BACKGROUND_BUTTON_PRIMARY_YELLOW = '#FFC239'
 export const PS_BACKGROUND_BUTTON_SECONDARY_YELLOW = '##FFB611'
 
-// export const PS_MAIN_RED = '#F01B0D';
-// export const PS_MAIN_WHITE = '#FFFFFF';
-// export const PS_MAIN_GREY_LIGHT = '#828282';
-// export const PS_OPTIONAL_BLACK = '#000000';
-// export const PS_MAIN_BLACK = '#1F1F1F';
-// export const PS_MAIN_BACKGROUND = '#E5E5E5';
 declare module '@mui/material/Typography' {
   interface TypographyPropsVariantOverrides {
     contactsHeader: true
     telNumberHeader: true
     buttonHeader: true
-    buttonPrimaryLine: true
+    titleButton: true
   }
 }
 
@@ -53,7 +47,7 @@ interface ExtendedTypographyOptions extends TypographyOptions {
   contactsHeader: React.CSSProperties
   telNumberHeader: React.CSSProperties
   buttonHeader: React.CSSProperties
-  buttonPrimaryLine: React.CSSProperties
+  titleButton: React.CSSProperties
 }
 
 declare module '@mui/material/styles' {
@@ -193,18 +187,21 @@ export const themeCustom = createTheme({
       padding: 0,
       margin: 0,
     },
-    // buttonPrimaryLine: {
-    //   fontWeight: 500,
-    //   fontSize: 14,
-    //   lineHeight: '16.9px',
-    //   color: PS_TEXT_PRIMARY_WHITE,
-    //   textTransform: 'capitalize',
-    //   padding: 0,
-    //   margin: 0,
-    // },
+    titleButton: {
+      [currentBreakpoints.breakpoints.down('md')]: {
+        fontSize: 14,
+        lineHeight: '16.9px',
+        fontWeight: 700,
+      },
+      fontWeight: 500,
+      fontSize: 16,
+      lineHeight: '19.4px',
+      color: PS_TEXT_PRIMARY_WHITE,
+      textTransform: 'uppercase',
+    },
 
     h1: {
-      [currentBreakpoints.breakpoints.between('xs', 'sm')]: {
+      [currentBreakpoints.breakpoints.down('md')]: {
         fontSize: 34,
         lineHeight: '40px',
       },
@@ -214,7 +211,7 @@ export const themeCustom = createTheme({
       lineHeight: '55px',
     },
     h2: {
-      [currentBreakpoints.breakpoints.between('xs', 'sm')]: {
+      [currentBreakpoints.breakpoints.down('md')]: {
         fontSize: 36,
         lineHeight: '36px',
       },
@@ -278,10 +275,15 @@ export const themeCustom = createTheme({
       // color: PS_MAIN_GREY_LIGHT,
     },
     body2: {
+      [currentBreakpoints.breakpoints.down('md')]: {
+        fontSize: 14,
+        lineHeight: '17px',
+      },
       fontSize: 16,
       fontWeight: 500,
-      // color: PS_MAIN_WHITE,
-      textTransform: 'uppercase',
+      lineHeight: '19.5px',
+      color: PS_TEXT_PRIMARY_WHITE_80,
+      fontFamily: `"Montserrat", sans-serif`,
     },
     caption: {
       fontSize: 20,
@@ -321,7 +323,7 @@ export const themeCustom = createTheme({
           contactsHeader: 'span',
           buttonHeader: 'div',
           telNumberHeader: 'div',
-          buttonPrimaryLine: 'div',
+          titleButton: 'div',
         },
       },
     },
