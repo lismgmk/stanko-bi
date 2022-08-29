@@ -9,6 +9,7 @@ export const PS_TEXT_SECONDARY_BLACK_60 = '#202020'
 export const PS_TEXT_PRIMARY_WHITE = '#FFFFFF'
 export const PS_TEXT_PRIMARY_WHITE_80 = '#FFFFFFCC'
 export const PS_TEXT_PRIMARY_BLUE = '#212864'
+export const PS_TEXT_PRIMARY_BLUE_40 = '#21286466'
 export const PS_TEXT_PRIMARY_GREY = '#FFFFFF'
 export const PS_TEXT_PRIMARY_GREY_80 = '#FFFFFFCC'
 export const PS_TEXT_SECONDARY_GREY = '#808080'
@@ -40,6 +41,9 @@ declare module '@mui/material/Typography' {
     telNumberHeader: true
     buttonHeader: true
     titleButton: true
+    cardsTitle: true
+    cardsText: true
+    cardsPrice: true
   }
 }
 
@@ -48,6 +52,9 @@ interface ExtendedTypographyOptions extends TypographyOptions {
   telNumberHeader: React.CSSProperties
   buttonHeader: React.CSSProperties
   titleButton: React.CSSProperties
+  cardsTitle: React.CSSProperties
+  cardsText: React.CSSProperties
+  cardsPrice: React.CSSProperties
 }
 
 declare module '@mui/material/styles' {
@@ -163,6 +170,27 @@ export const themeCustom = createTheme({
   },
   typography: {
     fontFamily: `"Inter", sans-serif`,
+    cardsTitle: {
+      fontWeight: 700,
+      fontSize: 18,
+      lineHeight: '19px',
+      color: PS_TEXT_PRIMARY_BLACK,
+      paddingTop: '2px',
+    },
+    cardsText: {
+      fontWeight: 400,
+      fontSize: 12,
+      lineHeight: '14.5px',
+      color: PS_TEXT_PRIMARY_BLACK_60,
+      paddingBottom: 2,
+    },
+    cardsPrice: {
+      fontWeight: 700,
+      fontSize: 22,
+      lineHeight: '26px',
+      color: PS_TEXT_PRIMARY_BLACK,
+      paddingTop: '28px',
+    },
     contactsHeader: {
       fontWeight: 400,
       fontSize: 14,
@@ -324,6 +352,9 @@ export const themeCustom = createTheme({
           buttonHeader: 'div',
           telNumberHeader: 'div',
           titleButton: 'div',
+          cardsTitle: 'div',
+          cardsText: 'div',
+          cardsPrice: 'div',
         },
       },
     },

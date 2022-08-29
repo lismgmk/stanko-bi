@@ -6,9 +6,9 @@ import { PS_BACKGROUND_BUTTON_PRIMARY_BLUE } from '../../theme'
 
 export const CardsTitleH2 = styled(Typography)<TypographyProps>(({ theme }) => ({
   [theme.breakpoints.down('md')]: {
-    marginTop: 8,
+    marginTop: 64,
   },
-  marginTop: 11,
+  marginTop: 88,
 }))
 
 export const sxResponsiveContainerWeight = {

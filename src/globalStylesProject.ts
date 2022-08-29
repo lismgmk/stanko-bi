@@ -1,4 +1,5 @@
 import { createStyles, makeStyles } from '@material-ui/core'
+import { PS_TEXT_PRIMARY_BLACK_60 } from './theme'
 
 const useStyles = makeStyles(() =>
   createStyles({
@@ -26,6 +27,19 @@ const useStyles = makeStyles(() =>
         overflowY: 'auto',
         margin: 0,
         padding: 0,
+      },
+
+      '.swiper-button-prev, .swiper-button-next': {
+        color: PS_TEXT_PRIMARY_BLACK_60,
+      },
+
+      '.swiper-slide': {
+        display: 'flex',
+        justifyContent: 'center',
+        // width: 285,
+      },
+      '.swiper-button-prev: after': {
+        position: 'relative',
       },
       '#root': {
         height: '100%',

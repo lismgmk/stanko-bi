@@ -1,3 +1,4 @@
+import { StaticImageData } from 'next/image'
 import { VkSvg } from 'svgIcons/VkSvg'
 import { FacebookSvg } from '../svgIcons/FacebookSvg'
 import { InstagramSvg } from '../svgIcons/InstagramSvg'
@@ -5,6 +6,9 @@ import { TelegramSvg } from '../svgIcons/TelegramSvg'
 import { TiktokSvg } from '../svgIcons/TiktokSvg'
 import { TwitterSvg } from '../svgIcons/TwitterSvg'
 import { YoutubeSvg } from '../svgIcons/YoutubeSvg'
+import card_1 from '../../public/images/card_1.webp'
+import card_2 from '../../public/images/bgMain.webp'
+import card_3 from '../../public/images/logo.webp'
 
 export const socialNetworks = [
   { svgElem: VkSvg },
@@ -46,7 +50,7 @@ export const mainImageBlock = {
 }
 
 export type cardsType = {
-  pathImg: string
+  pathImg: StaticImageData
   data: string
   tag: string
   title: string
@@ -63,7 +67,91 @@ export const cardsButtons = [
 ]
 export const cards: cardsType[] = [
   {
-    pathImg: './post_1.png',
+    pathImg: card_1,
+    data: 'Сегодня',
+    tag: '#болельщикам',
+    title: 'Каркасный дом с балконом LK-2',
+    article: [
+      { option: 'Размер:', value: '4х6 м' },
+      { option: 'Размер:', value: '4х6 м' },
+      { option: 'Размер:', value: '4х6 м' },
+    ],
+    price: '940 000 ₽',
+  },
+  {
+    pathImg: card_2,
+    data: 'Сегодня',
+    tag: '#болельщикам',
+    title: 'Каркасный дом с балконом LK-2',
+    article: [
+      { option: 'Размер:', value: '4х6 м' },
+      { option: 'Размер:', value: '4х6 м' },
+      { option: 'Размер:', value: '4х6 м' },
+    ],
+    price: '940 000 ₽',
+  },
+  {
+    pathImg: card_3,
+    data: 'Сегодня',
+    tag: '#болельщикам',
+    title: 'Каркасный дом с балконом LK-2',
+    article: [
+      { option: 'Размер:', value: '4х6 м' },
+      { option: 'Размер:', value: '4х6 м' },
+      { option: 'Размер:', value: '4х6 м' },
+    ],
+    price: '940 000 ₽',
+  },
+  {
+    pathImg: card_2,
+    data: 'Сегодня',
+    tag: '#болельщикам',
+    title: 'Каркасный дом с балконом LK-2',
+    article: [
+      { option: 'Размер:', value: '4х6 м' },
+      { option: 'Размер:', value: '4х6 м' },
+      { option: 'Размер:', value: '4х6 м' },
+    ],
+    price: '940 000 ₽',
+  },
+  {
+    pathImg: card_1,
+    data: 'Сегодня',
+    tag: '#болельщикам',
+    title: 'Каркасный дом с балконом LK-2',
+    article: [
+      { option: 'Размер:', value: '4х6 м' },
+      { option: 'Размер:', value: '4х6 м' },
+      { option: 'Размер:', value: '4х6 м' },
+    ],
+    price: '940 000 ₽',
+  },
+  {
+    pathImg: card_2,
+    data: 'Сегодня',
+    tag: '#болельщикам',
+    title: 'Каркасный дом с балконом LK-2',
+    article: [
+      { option: 'Размер:', value: '4х6 м' },
+      { option: 'Размер:', value: '4х6 м' },
+      { option: 'Размер:', value: '4х6 м' },
+    ],
+    price: '940 000 ₽',
+  },
+  {
+    pathImg: card_3,
+    data: 'Сегодня',
+    tag: '#болельщикам',
+    title: 'Каркасный дом с балконом LK-2',
+    article: [
+      { option: 'Размер:', value: '4х6 м' },
+      { option: 'Размер:', value: '4х6 м' },
+      { option: 'Размер:', value: '4х6 м' },
+    ],
+    price: '940 000 ₽',
+  },
+  {
+    pathImg: card_3,
     data: 'Сегодня',
     tag: '#болельщикам',
     title: 'Каркасный дом с балконом LK-2',
