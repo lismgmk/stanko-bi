@@ -9,6 +9,7 @@ export const PS_TEXT_SECONDARY_BLACK_60 = '#202020'
 export const PS_TEXT_PRIMARY_WHITE = '#FFFFFF'
 export const PS_TEXT_PRIMARY_WHITE_80 = '#FFFFFFCC'
 export const PS_TEXT_PRIMARY_BLUE = '#212864'
+export const PS_TEXT_PRIMARY_BLUE_40 = '#21286466'
 export const PS_TEXT_PRIMARY_GREY = '#FFFFFF'
 export const PS_TEXT_PRIMARY_GREY_80 = '#FFFFFFCC'
 export const PS_TEXT_SECONDARY_GREY = '#808080'
@@ -34,18 +35,15 @@ export const PS_BACKGROUND_BUTTON_PRIMARY_GREY_LIGHT = '#A5A5A5'
 export const PS_BACKGROUND_BUTTON_PRIMARY_YELLOW = '#FFC239'
 export const PS_BACKGROUND_BUTTON_SECONDARY_YELLOW = '##FFB611'
 
-// export const PS_MAIN_RED = '#F01B0D';
-// export const PS_MAIN_WHITE = '#FFFFFF';
-// export const PS_MAIN_GREY_LIGHT = '#828282';
-// export const PS_OPTIONAL_BLACK = '#000000';
-// export const PS_MAIN_BLACK = '#1F1F1F';
-// export const PS_MAIN_BACKGROUND = '#E5E5E5';
 declare module '@mui/material/Typography' {
   interface TypographyPropsVariantOverrides {
     contactsHeader: true
     telNumberHeader: true
     buttonHeader: true
-    buttonPrimaryLine: true
+    titleButton: true
+    cardsTitle: true
+    cardsText: true
+    cardsPrice: true
   }
 }
 
@@ -53,7 +51,10 @@ interface ExtendedTypographyOptions extends TypographyOptions {
   contactsHeader: React.CSSProperties
   telNumberHeader: React.CSSProperties
   buttonHeader: React.CSSProperties
-  buttonPrimaryLine: React.CSSProperties
+  titleButton: React.CSSProperties
+  cardsTitle: React.CSSProperties
+  cardsText: React.CSSProperties
+  cardsPrice: React.CSSProperties
 }
 
 declare module '@mui/material/styles' {
@@ -169,6 +170,27 @@ export const themeCustom = createTheme({
   },
   typography: {
     fontFamily: `"Inter", sans-serif`,
+    cardsTitle: {
+      fontWeight: 700,
+      fontSize: 18,
+      lineHeight: '19px',
+      color: PS_TEXT_PRIMARY_BLACK,
+      paddingTop: '2px',
+    },
+    cardsText: {
+      fontWeight: 400,
+      fontSize: 12,
+      lineHeight: '14.5px',
+      color: PS_TEXT_PRIMARY_BLACK_60,
+      paddingBottom: 2,
+    },
+    cardsPrice: {
+      fontWeight: 700,
+      fontSize: 22,
+      lineHeight: '26px',
+      color: PS_TEXT_PRIMARY_BLACK,
+      paddingTop: '28px',
+    },
     contactsHeader: {
       fontWeight: 400,
       fontSize: 14,
@@ -193,18 +215,21 @@ export const themeCustom = createTheme({
       padding: 0,
       margin: 0,
     },
-    // buttonPrimaryLine: {
-    //   fontWeight: 500,
-    //   fontSize: 14,
-    //   lineHeight: '16.9px',
-    //   color: PS_TEXT_PRIMARY_WHITE,
-    //   textTransform: 'capitalize',
-    //   padding: 0,
-    //   margin: 0,
-    // },
+    titleButton: {
+      [currentBreakpoints.breakpoints.down('md')]: {
+        fontSize: 14,
+        lineHeight: '16.9px',
+        fontWeight: 700,
+      },
+      fontWeight: 500,
+      fontSize: 16,
+      lineHeight: '19.4px',
+      color: PS_TEXT_PRIMARY_WHITE,
+      textTransform: 'uppercase',
+    },
 
     h1: {
-      [currentBreakpoints.breakpoints.between('xs', 'sm')]: {
+      [currentBreakpoints.breakpoints.down('md')]: {
         fontSize: 34,
         lineHeight: '40px',
       },
@@ -214,7 +239,7 @@ export const themeCustom = createTheme({
       lineHeight: '55px',
     },
     h2: {
-      [currentBreakpoints.breakpoints.between('xs', 'sm')]: {
+      [currentBreakpoints.breakpoints.down('md')]: {
         fontSize: 36,
         lineHeight: '36px',
       },
@@ -278,10 +303,15 @@ export const themeCustom = createTheme({
       // color: PS_MAIN_GREY_LIGHT,
     },
     body2: {
+      [currentBreakpoints.breakpoints.down('md')]: {
+        fontSize: 14,
+        lineHeight: '17px',
+      },
       fontSize: 16,
       fontWeight: 500,
-      // color: PS_MAIN_WHITE,
-      textTransform: 'uppercase',
+      lineHeight: '19.5px',
+      color: PS_TEXT_PRIMARY_WHITE_80,
+      fontFamily: `"Montserrat", sans-serif`,
     },
     caption: {
       fontSize: 20,
@@ -315,13 +345,72 @@ export const themeCustom = createTheme({
     // },
   },
   components: {
+    MuiCssBaseline: {
+      styleOverrides: () => ({
+        '@global': {
+          html: {
+            '-webkit-font-smoothing': 'antialiasing',
+            '-moz-osx-font-smoothing': 'grayscale',
+            height: '100%',
+            width: '100%',
+            margin: 0,
+            padding: 0,
+          },
+          '*, *::before, *::after': {
+            boxSizing: 'inherit',
+          },
+          body: {
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: '100% 100%',
+            fontFamily: 'Inter, serif',
+            fontWidth: 400,
+            fontSize: 12,
+            width: '100%',
+            height: '100%',
+            overflowX: 'hidden',
+            overflowY: 'auto',
+            margin: 0,
+            padding: 0,
+          },
+
+          '.swiper-button-prev, .swiper-button-next': {
+            color: PS_TEXT_PRIMARY_BLACK_60,
+          },
+
+          '.swiper-slide': {
+            display: 'flex',
+            justifyContent: 'center',
+            // width: 285,
+          },
+          '.swiper-button-prev: after': {
+            position: 'relative',
+          },
+          '#root': {
+            height: '100%',
+            width: '100%',
+            margin: 0,
+            padding: 0,
+          },
+          pre: {
+            margin: 0,
+            padding: 0,
+            fontFamily: 'Inter, serif',
+            fontWidth: 200,
+            fontSize: 11,
+          },
+        },
+      }),
+    },
     MuiTypography: {
       defaultProps: {
         variantMapping: {
           contactsHeader: 'span',
           buttonHeader: 'div',
           telNumberHeader: 'div',
-          buttonPrimaryLine: 'div',
+          titleButton: 'div',
+          cardsTitle: 'div',
+          cardsText: 'div',
+          cardsPrice: 'div',
         },
       },
     },

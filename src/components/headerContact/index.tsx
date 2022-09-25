@@ -1,6 +1,6 @@
-import { Container, Grid } from '@mui/material'
+import { Grid } from '@mui/material'
 import Typography from '@mui/material/Typography'
-import { CustomWrapperBox } from 'containers/headerContainer/style'
+import { CustomContainer, CustomWrapperBox } from 'containers/commonContainerStyles/style'
 import { NextPage } from 'next'
 import Image from 'next/image'
 import React from 'react'
@@ -9,12 +9,12 @@ import { MobileMenu } from '../../elements/mobileMenu'
 import { sxHideBlock, sxContainerHeight, sxHideAddressBlock } from '../../elements/mobileMenu/style'
 import { SocialIconBox } from '../../elements/socialIconBox'
 import { PS_BACKGROUND_PRIMARY_WHITE } from '../../theme'
-import { HeaderButton, sxResponsiveContainerWeight } from './style'
+import { HeaderButton } from './style'
 
 export const HeaderContact: NextPage = () => {
   return (
     <CustomWrapperBox bgColor={PS_BACKGROUND_PRIMARY_WHITE}>
-      <Container maxWidth={'xl'} disableGutters sx={sxResponsiveContainerWeight}>
+      <CustomContainer maxWidth={'xl'}>
         <Grid container spacing={1} sx={sxContainerHeight} alignItems={'center'} justifyContent={'space-between'}>
           <Grid item xl={3} lg={3} md={3}>
             <Image src={logoPic} alt="Picture of the author" width={201} height={62} />
@@ -51,7 +51,7 @@ export const HeaderContact: NextPage = () => {
           </Grid>
           <MobileMenu />
         </Grid>
-      </Container>
+      </CustomContainer>
     </CustomWrapperBox>
   )
 }

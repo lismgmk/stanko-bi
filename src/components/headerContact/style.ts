@@ -14,10 +14,3 @@ export const HeaderButton = styled(Button)<ButtonProps>(({ theme }) => ({
     color: theme.palette.primary.light,
   },
 }))
-
-export const sxResponsiveContainerWeight = {
-  pl: { xs: 1.2, sm: 1.2, md: 1.2, lg: 1.2, xl: 1.2 },
-  pr: { xs: 1.2, sm: 1.2, md: 1.2, lg: 1.2, xl: 1.2 },
-  position: 'relative',
-  overflow: 'hidden',
-}

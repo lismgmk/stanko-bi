@@ -1,5 +1,5 @@
-import { Container, Grid } from '@mui/material'
-import { CustomWrapperBox } from 'containers/headerContainer/style'
+import { Grid } from '@mui/material'
+import { CustomContainer, CustomWrapperBox } from 'containers/commonContainerStyles/style'
 import { nanoid } from 'nanoid'
 import { NextPage } from 'next'
 import React from 'react'
@@ -10,7 +10,7 @@ import { sxResponsiveContainerWeight, SecondaryLineButton, GridItem } from './st
 export const MenuLineSecondary: NextPage = () => {
   return (
     <CustomWrapperBox bgColor={PS_BACKGROUND_SECONDARY_BLUE}>
-      <Container maxWidth={'xl'} disableGutters sx={sxResponsiveContainerWeight}>
+      <CustomContainer maxWidth={'xl'} sx={sxResponsiveContainerWeight}>
         <Grid container sx={{ height: '100%' }} alignItems={'center'} justifyContent={'space-around'}>
           {menuLineSecondary.map((el) => {
             return (
@@ -20,7 +20,7 @@ export const MenuLineSecondary: NextPage = () => {
             )
           })}
         </Grid>
-      </Container>
+      </CustomContainer>
     </CustomWrapperBox>
   )
 }
