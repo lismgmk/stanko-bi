@@ -10,31 +10,23 @@
     "post-update": "echo \"codesandbox preview only, need an update\" && yarn upgrade --latest"
   },
   "dependencies": {
-    "@emotion/cache": "latest",
-    "@emotion/react": "latest",
-    "@emotion/server": "latest",
-    "@emotion/styled": "latest",
-    "@material-ui/core": "latest",
-    "@material-ui/icons": "latest",
-    "@material-ui/pickers": "latest",
-    "@mui/icons-material": "latest",
-    "@mui/material": "latest",
-    "@mui/styled-engine": "latest",
-    "@mui/styled-engine-sc": "latest",
-    "@mui/styles": "latest",
-    "@typescript-eslint/eslint-plugin": "^5.33.0",
-    "next": "latest",
-    "prettier": "^2.7.1",
-    "react": "latest",
-    "react-dom": "latest",
-    "swiper": "^6.8.2"
+    "@emotion/react": "11.10.4",
+    "@emotion/styled": "11.10.4",
+    "@mui/icons-material": "5.10.6",
+    "@mui/material": "5.10.6",
+    "@typescript-eslint/eslint-plugin": "5.33.0",
+    "next": "12.3.1",
+    "prettier": "2.7.1",
+    "react": "17.0.0",
+    "react-dom": "17.0.0",
+    "swiper": "8.4.1"
   },
   "devDependencies": {
-    "@types/node": "latest",
-    "@types/react": "latest",
-    "eslint": "latest",
-    "eslint-config-next": "latest",
-    "eslint-config-prettier": "^8.5.0",
-    "typescript": "latest"
+    "@types/node": "18.7.21",
+    "@types/react": "18.0.21",
+    "eslint": "8.24.0",
+    "eslint-config-next": "12.3.1",
+    "eslint-config-prettier": "8.5.0",
+    "typescript": "4.8.3"
   }
 }

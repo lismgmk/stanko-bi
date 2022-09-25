@@ -3,6 +3,7 @@ import * as React from 'react'
 import { MainImageBlock } from '../src/components/mainImageBlock'
 import { CardsContainer } from '../src/containers/cardsContainer'
 import HeaderContainer from '../src/containers/headerContainer'
+import { SpecialOfferContainer } from '../src/containers/specialOfferContainer'
 
 const Home: NextPage = () => {
   return (
@@ -10,6 +11,7 @@ const Home: NextPage = () => {
       <HeaderContainer />
       <MainImageBlock />
       <CardsContainer />
+      <SpecialOfferContainer />
     </div>
   )
 }

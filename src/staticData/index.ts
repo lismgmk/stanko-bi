@@ -9,6 +9,8 @@ import { YoutubeSvg } from '../svgIcons/YoutubeSvg'
 import card_1 from '../../public/images/card_1.webp'
 import card_2 from '../../public/images/bgMain.webp'
 import card_3 from '../../public/images/logo.webp'
+import offerSl_1 from '../../public/images/slider2_sl1.webp'
+import offerSl_2 from '../../public/images/slider2_sl2.webp'
 
 export const socialNetworks = [
   { svgElem: VkSvg },
@@ -49,6 +51,11 @@ export const mainImageBlock = {
     'На участок поставляются готовые модули, производится их монтаж в короткие сроки. Мы гарантируем выполнение всех взятых на себя обязательств и доступные цены.',
 }
 
+export type offerSlides = {
+  pathImg: StaticImageData
+  title: string
+  titleBolt: string
+}
 export type cardsType = {
   pathImg: StaticImageData
   data: string
@@ -161,5 +168,18 @@ export const cards: cardsType[] = [
       { option: 'Размер:', value: '4х6 м' },
     ],
     price: '940 000 ₽',
+  },
+]
+
+export const offerSlides: offerSlides[] = [
+  {
+    pathImg: offerSl_1,
+    title: 'Мы работаем с',
+    titleBolt: 'материнским капиталом!',
+  },
+  {
+    pathImg: offerSl_2,
+    title: 'Строим ',
+    titleBolt: 'бани, беседки, бытовки и дома в кредит!',
   },
 ]

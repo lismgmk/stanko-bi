@@ -4,14 +4,10 @@ import { nanoid } from 'nanoid'
 import { NextPage } from 'next'
 import Image from 'next/image'
 import React from 'react'
-import 'swiper/components/navigation/navigation.min.css'
-import SwiperCore, { Navigation } from 'swiper/core'
+import { Navigation } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import 'swiper/swiper.min.css'
 import { cards } from '../../staticData'
 import { CustomCard, CustomCardMedia } from './style'
-
-SwiperCore.use([Navigation])
 
 export const CardsBox: NextPage = () => {
   return (
@@ -38,6 +34,7 @@ export const CardsBox: NextPage = () => {
         }}
         className="mySwiper"
         navigation={true}
+        modules={[Navigation]}
       >
         {cards.map((elem) => {
           return (
