@@ -1,4 +1,4 @@
-import { Grid, GridProps } from '@mui/material'
+import { Grid, GridProps, Button, ButtonProps } from '@mui/material'
 import { styled } from '@mui/material/styles'
 
 export const sxIconOfferButton = {
@@ -13,6 +13,14 @@ export const sxResponsiveOfferContainerWeight = { height: 461 }
 export const ContainerGrid = styled(Grid)<GridProps>(() => ({
   height: 461,
   position: 'relative',
+}))
+
+export const NextButton = styled(Button)<ButtonProps>(() => ({
+  position: 'absolute',
+  zIndex: 5,
+  color: 'red',
+  bottom: 150,
+  left: 150,
 }))
 
 export const CustomImage = styled(Grid)<GridProps>(({ theme }) => ({
