@@ -1,6 +1,5 @@
-import { Button, ButtonProps, Grid } from '@mui/material'
+import { Button, ButtonProps, Grid, GridProps } from '@mui/material'
 import { styled } from '@mui/material/styles'
-import { GridProps } from '@mui/system'
 
 export const GridItem = styled(Grid)<GridProps>(({ theme }) => ({
   borderRight: `1px solid ${theme.palette.background.paper}`,

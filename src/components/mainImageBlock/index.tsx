@@ -21,7 +21,7 @@ export const MainImageBlock: NextPage = () => {
     <CustomWrapperBox>
       <UnderBgBox />
       <ImageBox>
-        <Image height={551} alt="Mountains" src={bgMain} layout="fill" objectFit="cover" quality={90} />
+        <Image alt="Mountains" src={bgMain} layout="fill" objectFit="cover" quality={90} />
       </ImageBox>
 
       <CustomContainer maxWidth={'xl'} sx={sxResponsiveContainerWeight}>

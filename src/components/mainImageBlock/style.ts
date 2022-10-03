@@ -1,7 +1,6 @@
-import { Box, BoxProps } from '@mui/material'
+import { Box, BoxProps, TypographyProps } from '@mui/material'
 import { styled } from '@mui/material/styles'
 import Typography from '@mui/material/Typography'
-import { TypographyProps } from '@mui/system'
 
 export const UnderBgBox = styled(Box)<BoxProps>(() => ({
   zIndex: 1,

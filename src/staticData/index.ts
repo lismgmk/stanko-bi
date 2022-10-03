@@ -11,6 +11,7 @@ import card_2 from '../../public/images/bgMain.webp'
 import card_3 from '../../public/images/logo.webp'
 import offerSl_1 from '../../public/images/slider2_sl1.webp'
 import offerSl_2 from '../../public/images/slider2_sl2.webp'
+import offerSl_2_emblems from '../../public/images/slider2_sl2_emblems.png'
 
 export const socialNetworks = [
   { svgElem: VkSvg },
@@ -52,7 +53,8 @@ export const mainImageBlock = {
 }
 
 export type offerSlides = {
-  pathImg: StaticImageData
+  pathImg: string
+  pathImgEmblems: StaticImageData
   title: string
   titleBolt: string
 }
@@ -173,12 +175,14 @@ export const cards: cardsType[] = [
 
 export const offerSlides: offerSlides[] = [
   {
-    pathImg: offerSl_1,
+    pathImg: offerSl_1.src,
+    pathImgEmblems: offerSl_2_emblems,
     title: 'Мы работаем с',
     titleBolt: 'материнским капиталом!',
   },
   {
-    pathImg: offerSl_2,
+    pathImg: offerSl_2.src,
+    pathImgEmblems: offerSl_2_emblems,
     title: 'Строим ',
     titleBolt: 'бани, беседки, бытовки и дома в кредит!',
   },
