@@ -3,6 +3,7 @@ import { TypographyOptions } from '@mui/material/styles/createTypography'
 import React from 'react'
 
 export const PS_TEXT_PRIMARY_BLACK = '#000000'
+export const PS_TEXT_PRIMARY_BLACK_20 = '#00000033'
 export const PS_TEXT_PRIMARY_BLACK_80 = '#000000CC'
 export const PS_TEXT_PRIMARY_BLACK_60 = '#00000099'
 export const PS_TEXT_SECONDARY_BLACK_60 = '#202020'
@@ -23,6 +24,7 @@ export const PS_BACKGROUND_PRIMARY_BLUE = '#15193D'
 export const PS_BACKGROUND_SECONDARY_BLUE = '#8C93D1'
 export const PS_BACKGROUND_PRIMARY_GREY = '#E5E5E5'
 export const PS_BACKGROUND_SECONDARY_GREY = '#F1F1F6'
+export const PS_BACKGROUND_SECONDARY_GREY_80 = '#F1F1F680'
 export const PS_BACKGROUND_OPTIONAL_GREY_80 = '#F6F6F9CC'
 export const PS_BACKGROUND_OPTIONAL_GREY_90 = '#F6F6F9E5'
 export const PS_BACKGROUND_PRIMARY_BLACK_35 = '#00000059'
@@ -373,18 +375,18 @@ export const themeCustom = createTheme({
             padding: 0,
           },
 
-          '.swiper-button-prev, .swiper-button-next': {
-            color: PS_TEXT_PRIMARY_BLACK_60,
-          },
-
-          '.swiper-slide': {
-            display: 'flex',
-            justifyContent: 'center',
-            // width: 285,
-          },
-          '.swiper-button-prev: after': {
-            position: 'relative',
-          },
+          // '.swiper-button-prev, .swiper-button-next': {
+          //   color: PS_TEXT_PRIMARY_BLACK_60,
+          // },
+          //
+          // '.swiper-slide': {
+          //   display: 'flex',
+          //   justifyContent: 'center',
+          //   // width: 285,
+          // },
+          // '.swiper-button-prev: after': {
+          //   position: 'relative',
+          // },
           '#root': {
             height: '100%',
             width: '100%',

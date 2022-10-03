@@ -1,7 +1,6 @@
-import { Button, ButtonProps } from '@mui/material'
+import { Button, ButtonProps, TypographyProps } from '@mui/material'
 import { styled } from '@mui/material/styles'
 import Typography from '@mui/material/Typography'
-import { TypographyProps } from '@mui/system'
 import { PS_BACKGROUND_BUTTON_PRIMARY_BLUE } from '../../theme'
 
 export const CardsTitleH2 = styled(Typography)<TypographyProps>(({ theme }) => ({
