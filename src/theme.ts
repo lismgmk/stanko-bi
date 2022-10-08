@@ -251,9 +251,9 @@ export const themeCustom = createTheme({
       lineHeight: '50px',
     },
     h3: {
-      [currentBreakpoints.breakpoints.between('xs', 'sm')]: {
-        fontSize: 36,
-        lineHeight: '36px',
+      [currentBreakpoints.breakpoints.down('sm')]: {
+        fontSize: 30,
+        lineHeight: '30px',
       },
       fontSize: 38,
       fontWeight: 400,

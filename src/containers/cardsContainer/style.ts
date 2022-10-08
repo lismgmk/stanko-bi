@@ -10,9 +10,7 @@ export const CardsTitleH2 = styled(Typography)<TypographyProps>(({ theme }) => (
   marginTop: 88,
 }))
 
-export const sxResponsiveContainerWeight = {
-  height: 822,
-}
+export const sxResponsiveContainerWeight = {}
 export const ButtonSeeAll = styled(Button)<ButtonProps>(({ theme }) => ({
   fontWeight: 500,
   fontSize: 16,

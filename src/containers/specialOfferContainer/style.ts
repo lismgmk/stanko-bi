@@ -13,18 +13,15 @@ interface CustomBoxProps extends BoxProps {
   imageBg: string
 }
 
-export const ContainerGrid = styled(Grid)<GridProps>(({ theme }) => ({
-  height: '461px',
+export const ContainerGrid = styled(Grid)<GridProps>(() => ({
+  height: 461,
   position: 'relative',
-  [theme.breakpoints.down('md')]: {
-    height: '800px',
-  },
 }))
 
 export const TextContainer = styled(Box)<BoxProps>(({ theme }) => ({
   paddingBottom: '52px',
   [theme.breakpoints.down('md')]: {
-    paddingBottom: '335px',
+    paddingBottom: '55px',
   },
 }))
 
@@ -69,6 +66,10 @@ export const ContentContainerOffer = styled(Grid)<GridProps>(({ theme }) => ({
   paddingRight: '62px',
   flexDirection: 'column',
   justifyContent: 'end',
+
+  [theme.breakpoints.down('sm')]: {
+    padding: '46px 27px 0px 27px',
+  },
   [theme.breakpoints.only('lg')]: {
     width: 640,
   },
@@ -125,7 +126,10 @@ export const CustomImage = styled(Grid)<GridProps>(({ theme }) => ({
   position: 'relative',
   width: '43%',
 }))
-export const EmblemsImage = styled(Grid)<GridProps>(() => ({
+export const EmblemsImage = styled(Grid)<GridProps>(({ theme }) => ({
   width: '220px',
   height: '108px',
+  [theme.breakpoints.down('md')]: {
+    display: 'none',
+  },
 }))
