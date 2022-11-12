@@ -1,7 +1,7 @@
 import React from 'react'
 import { SvgIcon, SvgIconProps } from '@mui/material'
 
-export const SertificateSvg = (props: SvgIconProps) => {
+export const CertificateSvg = (props: SvgIconProps) => {
   return (
     <SvgIcon {...props} viewBox={'0 0 100 100'} fill={'none'}>
       <rect opacity="0.8" width="100" height="99.0991" fill="url(#pattern0)" />

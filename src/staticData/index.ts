@@ -1,7 +1,18 @@
+import { EmotionJSX } from '@emotion/react/types/jsx-namespace'
+import { SvgIconComponent } from '@mui/icons-material'
+import { SvgIconProps } from '@mui/material'
 import { StaticImageData } from 'next/image'
 import { VkSvg } from 'svgIcons/VkSvg'
+import { BadgeSvg } from '../svgIcons/BadgeSvg'
+import { CertificateSvg } from '../svgIcons/CertificateSvg'
+import { ExperienceCertificateSvg } from '../svgIcons/ExperienceCertificateSvg'
 import { FacebookSvg } from '../svgIcons/FacebookSvg'
+import { GoalSvg } from '../svgIcons/GoalSvg'
 import { InstagramSvg } from '../svgIcons/InstagramSvg'
+import { MoneySackSvg } from '../svgIcons/MoneySackSvg'
+import { QualitySvg } from '../svgIcons/QualitySvg'
+import { ReceiptSvg } from '../svgIcons/ReceiptSvg'
+import { RunningManSvg } from '../svgIcons/RunningManSvg'
 import { TelegramSvg } from '../svgIcons/TelegramSvg'
 import { TiktokSvg } from '../svgIcons/TiktokSvg'
 import { TwitterSvg } from '../svgIcons/TwitterSvg'
@@ -185,5 +196,54 @@ export const offerSlides: offerSlides[] = [
     pathImgEmblems: offerSl_2_emblems,
     title: 'Строим ',
     titleBolt: 'бани, беседки, бытовки и дома в кредит!',
+  },
+]
+
+export interface IAdvantages {
+  title: string
+  text: string
+  icon: any
+}
+
+export const advantages: IAdvantages[] = [
+  {
+    title: 'Работаем строго по договору',
+    text: 'Стоимость строительсва фиксированная. И все наши обязательства прописаны в договоре.',
+    icon: 'CertificateSvg',
+  },
+  {
+    title: 'Честная цена и понятные условия',
+    text: 'Поэтапная оплата. Нет скрытых платежей и мелких шрифтов.',
+    icon: 'MoneySackSvg',
+  },
+  {
+    title: 'Фотоотчет процесса строительства',
+    text: 'Бесплатный фото или видео отчет (по договорённости)',
+    icon: 'RunningManSvg',
+  },
+  {
+    title: 'Более 7 лет опыта',
+    text: 'Современное и качественное строительство, опытными бригадами.',
+    icon: 'ExperienceCertificateSvg',
+  },
+  {
+    title: 'Выставка и собственное производство',
+    text: 'Лучшее соотношение цены и качества. К нам возвращаются наши клиенты и рекомендуют своим знакомым.',
+    icon: 'BadgeSvg',
+  },
+  {
+    title: 'Экологически чистый материал',
+    text: 'Сертифицированные, экологичные материалы от проверенных поставщиков.',
+    icon: 'GoalSvg',
+  },
+  {
+    title: 'Гарантийное обслуживание любой постройки',
+    text: 'Даем гарантию не на словах.',
+    icon: 'ReceiptSvg',
+  },
+  {
+    title: 'Индивидуальные проекты',
+    text: 'Возможны изменения проектов из каталога и строительство по индивидуальным планам.',
+    icon: 'QualitySvg',
   },
 ]

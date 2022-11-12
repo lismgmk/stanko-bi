@@ -24,7 +24,7 @@ export const PS_BACKGROUND_PRIMARY_BLUE = '#15193D'
 export const PS_BACKGROUND_SECONDARY_BLUE = '#8C93D1'
 export const PS_BACKGROUND_PRIMARY_GREY = '#E5E5E5'
 export const PS_BACKGROUND_SECONDARY_GREY = '#F1F1F6'
-export const PS_BACKGROUND_SECONDARY_GREY_80 = '#F1F1F680'
+export const PS_BACKGROUND_SECONDARY_GREY_80 = 'rgba(246, 246, 249, 0.8)'
 export const PS_BACKGROUND_OPTIONAL_GREY_80 = '#F6F6F9CC'
 export const PS_BACKGROUND_OPTIONAL_GREY_90 = '#F6F6F9E5'
 export const PS_BACKGROUND_PRIMARY_BLACK_35 = '#00000059'
@@ -46,6 +46,7 @@ declare module '@mui/material/Typography' {
     cardsTitle: true
     cardsText: true
     cardsPrice: true
+    advantagesText: true
   }
 }
 
@@ -57,6 +58,7 @@ interface ExtendedTypographyOptions extends TypographyOptions {
   cardsTitle: React.CSSProperties
   cardsText: React.CSSProperties
   cardsPrice: React.CSSProperties
+  advantagesText: React.CSSProperties
 }
 
 declare module '@mui/material/styles' {
@@ -172,6 +174,17 @@ export const themeCustom = createTheme({
   },
   typography: {
     fontFamily: `"Inter", sans-serif`,
+    advantagesText: {
+      fontSize: 14,
+      fontWeight: 400,
+      lineHeight: '16px',
+      fontFamily: `"Montserrat", sans-serif`,
+      color: PS_TEXT_PRIMARY_BLACK_60,
+      [currentBreakpoints.breakpoints.down('md')]: {
+        fontSize: 12,
+        lineHeight: '14px',
+      },
+    },
     cardsTitle: {
       fontWeight: 700,
       fontSize: 18,
@@ -260,11 +273,16 @@ export const themeCustom = createTheme({
       color: PS_TEXT_PRIMARY_BLACK,
       lineHeight: '42px',
     },
-    // h4: {
-    //   fontSize: 12,
-    //   fontWeight: 300,
-    //   color: PS_MAIN_GREY_LIGHT,
-    // },
+    h4: {
+      fontSize: 20,
+      fontWeight: 500,
+      lineHeight: '21px',
+      color: PS_TEXT_PRIMARY_BLACK,
+      [currentBreakpoints.breakpoints.down('md')]: {
+        fontSize: 18,
+        lineHeight: '19px',
+      },
+    },
     // h5: {
     //   fontSize: 11,
     //   fontWeight: 400,
@@ -413,6 +431,7 @@ export const themeCustom = createTheme({
           cardsTitle: 'div',
           cardsText: 'div',
           cardsPrice: 'div',
+          advantagesText: 'div',
         },
       },
     },
